@@ -1,0 +1,42 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+
+header {
+    text-align: center;
+    height: 20rem;
+    background-color: green;
+}
+
+
+
+/* ------------------ CSS FOR NAVBAR -------------------- */
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.navbar-menu {
+    margin: auto 0;
+}
+
+.nav-item {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.container {
+    margin: auto 0;
+}
