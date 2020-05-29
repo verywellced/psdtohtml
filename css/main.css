@@ -1,522 +1,659 @@
 :root {
+  /* Color Variables */
 
-    /* Color Variables */
+  --primary-color: gold;
+  --primary-light: rgb(243, 220, 91);
+  --secondary-color: #b8b8aa;
+  --background-color: #f5f9e9;
 
-    --primary-color: gold;
-    --primary-light: rgb(243, 220, 91);
-    --secondary-color: #B8B8AA;
-    --background-color : #F5F9E9;
+  /* Padding Sizes  */
 
+  --padding-xl: 8rem;
+  --padding-lg: 4rem;
+  --padding-md: 2rem;
+  --padding-sm: 1rem;
+  --padding-xs: 0.5rem;
 
-    
-    /* Padding Sizes  */
+  /* Margin Sizes  */
 
-    --padding-xl: 8rem; 
-    --padding-lg: 4rem; 
-    --padding-md: 2rem; 
-    --padding-sm: 1rem; 
-    --padding-xs: 0.5rem; 
+  --margin-xl: 8rem;
+  --margin-lg: 4rem;
+  --margin-md: 2rem;
+  --margin-sm: 1rem;
+  --margin-xs: 0.5rem;
 
-    /* Margin Sizes  */
+  /* Font size */
 
-    --margin-xl: 8rem; 
-    --margin-lg: 4rem; 
-    --margin-md: 2rem; 
-    --margin-sm: 1rem; 
-    --margin-xs: 0.5rem; 
+  --font-xl: 4rem;
+  --font-lg: 3rem;
+  --font-md: 2rem;
+  --font-sm: 1rem;
+  --font-xs: 0.8rem;
 
+  /* Font Family */
 
-    /* Font size */
+  --font-family-primary: "Oswald", sans-serif;
+  --font-family-secondary: "Yesteryear", cursive;
 
-    --font-xl : 4rem;
-    --font-lg : 3rem;
-    --font-md : 2rem;
-    --font-sm : 1rem;
+  /* Border Radius */
+  --border-radius: 0.5rem;
 
-    /* Font Family */
-
-    --font-family-primary : 'Oswald', sans-serif;
-    --font-family-secondary :  'Yesteryear', cursive ;
-
-    /* Border Radius */
-    --border-radius: 0.5rem;
-
-
+  /* Custom Transition  */
+  --custom-transition: all 0.4s ease-in-out;
 }
 
-
 * {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    padding-bottom: var(--padding-md);
-    background-color: var(--primary-color);
-    background-color: var(--background-color);
+  padding-bottom: var(--padding-md);
+  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 /*-----------------------  CSS FOR HEADER -----------------------------*/
 
-.header { 
-    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../assets/images/dave.jpg") ;
-    background-size: cover;
-    text-align: center;
-    padding-bottom: var(--padding-lg);
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/dave.jpg");
+  background-size: cover;
+  text-align: center;
+  padding-bottom: var(--padding-lg);
 }
 
-
-
 .header-main {
-    font-family: var(--font-family-primary);
-    line-height: 100%;
-    color: white;
-    font-size: var(--font-xl);
-    font-weight: 500;
-    letter-spacing: 2px;
-    margin-bottom: var(--margin-md);
+  font-family: var(--font-family-primary);
+  line-height: 100%;
+  color: white;
+  font-size: var(--font-xl);
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: var(--margin-md);
 }
 
 .header-subtitle {
-    font-family: var(--font-family-secondary);
-    color: var(--primary-color);
-    font-size: var(--font-md);
-    letter-spacing: 0.1rem;
-    line-height: 100%;
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+  font-size: var(--font-md);
+  letter-spacing: 0.1rem;
+  line-height: 100%;
 }
-
 
 /*-----------------------  CSS FOR NAVBAR -----------------------------*/
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--padding-md) var(--padding-md) 0 var(--padding-md);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-md) var(--padding-md) 0 var(--padding-md);
 }
 
-.navbar-brand { 
-    color: white;
-    font-family: 'Yesteryear', cursive ;
-    font-size: 3rem;
-    text-decoration: none;
+.navbar-brand {
+  color: white;
+  font-family: "Yesteryear", cursive;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
 .navbar-menu {
-    list-style: none;
-    color: white;
-    margin: auto 0;
+  list-style: none;
+  color: white;
+  margin: auto 0;
 }
 
 .navbar-menu .nav-item {
-    display: inline;
-    font-size: var(--font-sm);
-    text-transform: uppercase;
-    font-family: var(--font-family-primary)
+  display: inline;
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  font-family: var(--font-family-primary);
 }
 
 .nav-item .nav-link {
-    font-family: 'Oswald', sans-serif;
-    text-decoration: none;
-    font-weight: 500;
-    color: white;
-    padding-left:  var(--margin-xs);
-    padding-right: var(--padding-xs);
-    transition: all 0.3s ease-in-out;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  padding-left: var(--margin-xs);
+  padding-right: var(--padding-xs);
+  transition: var(--custom-transition);
 }
 
 .nav-link .nav-icon {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .nav-link:hover {
-    color: gold;
+  color: gold;
 }
 
 /*-----------------------  CSS FOR CONTAINERS -----------------------------*/
 
 .container {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
-
 
 /*-----------------------  CSS FOR BUTTONS -----------------------------*/
 
 .button {
-    padding: 0.5rem 1rem;
-    background-color: rgb(122, 114, 114);
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: rgb(122, 114, 114);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 .button-primary {
-    color: black;
-    background-color: gold;
-    transition: all 0.3s ease-in-out;
+  color: black;
+  background-color: gold;
+  transition: var(--custom-transition)
 }
 
 .button-primary:hover {
-    background-color: var(--primary-light);
+  background-color: var(--primary-light);
 }
 
 
+.button-transparent {
+  background-color: transparent;
+  border: 2px solid white;
+  transition: var(--custom-transition);
+}
+
+.button-transparent:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
 
 /*-----------------------  CSS FOR SECTION -----------------------------*/
 .section {
-    padding-top: var(--padding-lg);
-    padding-bottom: var(--padding-lg);
+  padding-top: var(--padding-lg);
+  padding-bottom: var(--padding-lg);
 }
-
 
 /*-----------------------  CSS FOR  DISCOVER SECTION -----------------------------*/
 
 .card-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: var(--margin-md);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: var(--margin-md);
 }
 
-
 .food-item {
-    border-radius: var(--border-radius);
-    text-align: center;
-    padding: var(--padding-sm);
-    margin-right: var(--margin-xs);
-    margin-left: var(--margin-xs);
-    height: 20rem;
-    width: 17%;
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding: var(--padding-sm);
+  margin-right: var(--margin-xs);
+  margin-left: var(--margin-xs);
+  height: 20rem;
+  width: 17%;
 }
 
 .food-2 {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../assets/images/dave2.jpg");
-    background-size: cover;
-    margin-top: -2rem 
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/dave2.jpg");
+  background-size: cover;
+  margin-top: -2rem;
 }
 .food-3 {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../assets/images/dave3.jpg");
-    background-size: cover;
-    
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/dave3.jpg");
+  background-size: cover;
 }
 
 .food-border {
-    border: 3px solid var(--primary-color);
-    position: relative;
-    border-radius: var(--border-radius);
+  border: 3px solid var(--primary-color);
+  position: relative;
+  border-radius: var(--border-radius);
 }
 
 .food-overlay {
-    position: absolute;
-    border-radius: var(--border-radius);
-    top: var(--padding-xs);
-    right:  var(--padding-xs);
-    padding-top: var(--padding-lg);
-    background-color: var(--secondary-color);
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  border-radius: var(--border-radius);
+  top: var(--padding-xs);
+  right: var(--padding-xs);
+  padding-top: var(--padding-lg);
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
 }
 
 .food-title {
-    color: var(--primary-color); 
-    font-family:  var(--font-family-secondary);
-    font-size: var(--font-md);
-    -webkit-text-stroke: 0.0001px black;
-    line-height: 100%;
-    text-shadow: rgba(0,0,0,0.5);
+  color: var(--primary-color);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-md);
+  -webkit-text-stroke: 0.0001px black;
+  line-height: 100%;
+  text-shadow: rgba(0, 0, 0, 0.5);
 }
 
 .food-paragraph {
-    font-family:  var(--font-family-primary);
-    font-size: var(--font-sm);
-    color: black;
-    letter-spacing: 1px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-sm);
+  color: black;
+  letter-spacing: 1px;
 }
 .food-paragraph-title {
-    font-family:  var(--font-family-primary);
-    font-size: var(--font-md);
-    color: black;
-    letter-spacing: 2px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-md);
+  color: black;
+  letter-spacing: 2px;
 }
 
 /*-----------------------  CSS FOR  SPECIALTIES SECTION -----------------------------*/
 
 .section-specialities {
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("../assets/images/blackcar.jpg");
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../assets/images/blackcar.jpg");
+  background-size: cover;
 }
 
 .specialities-h1 {
-    padding-top: var(--padding-md);
-    font-family: var(--font-family-secondary);
-    color: var(--primary-color);
-    font-size: var(--font-md);
-    letter-spacing: 0.1rem;
+  padding-top: var(--padding-md);
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+  font-size: var(--font-md);
+  letter-spacing: 0.1rem;
 }
 .specialities-h2 {
-    font-family: var(--font-family-primary);
-    color:  white ;
-    font-size: var(--font-md);
-    letter-spacing: 0.2rem;
-    margin-bottom: var(--margin-md);
+  font-family: var(--font-family-primary);
+  color: white;
+  font-size: var(--font-md);
+  letter-spacing: 0.2rem;
+  margin-bottom: var(--margin-md);
 }
-
 
 .specialities-h3 {
-    font-family: var(--font-family-primary);
-    color: white;
-    font-size: var(--font-sm);
-    margin-bottom: var(--margin-lg);
+  font-family: var(--font-family-primary);
+  color: white;
+  font-size: var(--font-sm);
+  margin-bottom: var(--margin-lg);
 }
-
 
 .specialities-image1,
 .specialities-image2,
 .specialities-image3 {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    height: 15rem;
-    background-size: cover;
-    border-radius: var(--border-radius);
-    margin-bottom: var(--margin-sm);
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: 15rem;
+  background-size: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--margin-sm);
 }
-
 
 .specialities-image1 {
-    background-image: url("../assets/images/dave.jpg");
+  background-image: url("../assets/images/dave.jpg");
 }
 .specialities-image2 {
-    background-image: url("../assets/images/dave2.jpg");
+  background-image: url("../assets/images/dave2.jpg");
 }
 .specialities-image3 {
-    background-image: url("../assets/images/dave3.jpg");
+  background-image: url("../assets/images/dave3.jpg");
 }
 
 .specialities-image1:hover .specialities-overlay,
 .specialities-image2:hover .specialities-overlay,
 .specialities-image3:hover .specialities-overlay {
-    opacity: 1;
-    
+  opacity: 1;
 }
 
 .specialities-row {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .specialities-col {
-    width: 22%;
-    margin-left: var(--margin-xs);
-    margin-right: var(--margin-xs);
+  width: 22%;
+  margin-left: var(--margin-xs);
+  margin-right: var(--margin-xs);
 }
 
-.specialities-overlay{
-    opacity: 0;
-    position: absolute;
-    background-color: rgb(255, 217, 0,0.7);
-    width: 100%;
-    height: 100%;
-    padding: var(--padding-sm);
-    text-decoration: none;
-    color: white;
-    font-family: var(--font-family-primary);
-    font-size: var(--font-md);
-    transition: all 0.4s ease-in-out;
+.specialities-overlay {
+  opacity: 0;
+  position: absolute;
+  background-color: rgb(255, 217, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: var(--padding-sm);
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-md);
+  transition: var(--custom-transition);
 }
 
 .specialities-border {
-    border: 2px solid white;
-    border-radius: var(--border-radius);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 2px solid white;
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .specialities-middle {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 }
 .specialities-middle::before {
-    content: '';
-    position: absolute;
-    border-top: 65px solid var(--background-color);
-    border-right: 100vw solid transparent;
-    top: -65px;
-    left: 0;
+  content: "";
+  position: absolute;
+  border-top: 65px solid var(--background-color);
+  border-right: 100vw solid transparent;
+  top: -65px;
+  left: 0;
 }
 .specialities-middle::after {
-    content: '';
-    position: absolute;
-    border-bottom: 65px solid var(--background-color);
-    border-left: 100vw solid transparent;
-    bottom: -65px;
-    right: 0;
+  content: "";
+  position: absolute;
+  border-bottom: 65px solid var(--background-color);
+  border-left: 100vw solid transparent;
+  bottom: -65px;
+  right: 0;
 }
-
 
 /*-----------------------  CSS FOR  SPECIAL MENU SECTION -----------------------------*/
 
 .section-special-menu {
-    text-align: center;
+  text-align: center;
 }
 
 .special-menu-container {
-    width: 70vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .special-menu-col {
-    width: 50%;
-    height: 25rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  width: 50%;
+  height: 25rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .special-menu-h1 {
-    padding-top: var(--padding-md);
-    font-family: var(--font-family-secondary);
-    color: var(--primary-color);
-    font-size: var(--font-md);
-    letter-spacing: 0.1rem;
+  padding-top: var(--padding-md);
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+  font-size: var(--font-md);
+  letter-spacing: 0.1rem;
 }
 .special-menu-h2 {
-    font-family: var(--font-family-primary);
-    color:  black ;
-    line-height: 100%;
-    font-size: var(--font-md);
-    letter-spacing: 0.2rem;
-    margin-bottom: var(--margin-md);
+  font-family: var(--font-family-primary);
+  color: black;
+  line-height: 100%;
+  font-size: var(--font-md);
+  letter-spacing: 0.2rem;
+  margin-bottom: var(--margin-md);
 }
 .special-menu-h3 {
-    font-family: var(--font-family-secondary);
-    color:  white ;
-    font-size: var(--font-md);
-    width: 100%;
-    line-height: 100%;
-    margin-bottom: var(--margin-sm);
-    letter-spacing: 0.2rem;
+  font-family: var(--font-family-secondary);
+  color: white;
+  font-size: var(--font-md);
+  width: 100%;
+  line-height: 100%;
+  margin-bottom: var(--margin-sm);
+  letter-spacing: 0.2rem;
 }
 .special-menu-h4 {
-    font-family: var(--font-family-primary);
-    width: 100%;
-    color:  white ;
-    font-size: var(--font-sm);
-    letter-spacing: 0.2rem;
-    line-height: 100%;
-    margin-bottom: var(--margin-sm);
+  font-family: var(--font-family-primary);
+  width: 100%;
+  color: white;
+  font-size: var(--font-sm);
+  letter-spacing: 0.2rem;
+  line-height: 100%;
+  margin-bottom: var(--margin-sm);
 }
 
 .special-menu-icon {
-    font-size: var(--font-md);
-    width: 100%;
-    margin-bottom: var(--margin-sm);
+  font-size: var(--font-md);
+  width: 100%;
+  margin-bottom: var(--margin-sm);
 }
 .special-menu-p {
-    font-family: var(--font-family-primary);
-    width: 100%;
-    color:  white ;
-    font-size: var(--font-xs);
-    line-height: 100%;
-    letter-spacing: 0.2rem;
-    margin-bottom: var(--margin-sm);
-    margin-left: var(--margin-sm);
-    margin-right: var(--margin-sm);
+  font-family: var(--font-family-primary);
+  width: 100%;
+  color: white;
+  font-size: var(--font-xs);
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  margin-bottom: var(--margin-sm);
+  margin-left: var(--margin-sm);
+  margin-right: var(--margin-sm);
 }
 
 .separator,
 .separator-black {
-    width: var(--margin-lg);
-    text-align: center;
-    border-bottom: 2px solid white;
-    margin-bottom: var(--margin-sm);
-
+  width: var(--margin-lg);
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin-bottom: var(--margin-sm);
 }
-
 
 .col-large {
-    width: 50%;
+  width: 50%;
 }
 
-.col-large-1, 
-.col-large-3{
-    display: flex;
-    background-color:var(--primary-color);
-    color: white;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.col-large-1,
+.col-large-3 {
+  display: flex;
+  background-color: var(--primary-color);
+  color: white;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .col-large-2 {
-    background-image: url("../assets/images/blackcar.jpg");
-    background-size: cover;
+  background-image: url("../assets/images/blackcar.jpg");
+  background-size: cover;
 }
 .col-large-4 {
-    background-image: url("../assets/images/dave2.jpg");
-    background-size: cover;
+  background-image: url("../assets/images/dave2.jpg");
+  background-size: cover;
 }
 
 /* 4 x 4 Box */
 
-.col-sm-1 *, 
+.col-sm-1 *,
 .col-sm-4 *,
 .col-sm-5 *,
 .col-sm-8 * {
-    color: var(--primary-color);
-    margin-bottom: var(--margin-xs);
+  color: var(--primary-color);
+  margin-bottom: var(--margin-xs);
 }
 
 /* COL-SM PICTURES */
 
-
 .col-sm-2 {
-    background: url("../assets/images/dave3.jpg");
+  background: url("../assets/images/dave3.jpg");
 }
 
 .col-sm-3 {
-    background: url("../assets/images/dave3.jpg");
+  background: url("../assets/images/dave3.jpg");
 }
 
 .col-sm-6 {
-    background: url("../assets/images/dave2.jpg");
+  background: url("../assets/images/dave2.jpg");
 }
 
 .col-sm-7 {
-    background: url("../assets/images/dave.jpg");
+  background: url("../assets/images/dave.jpg");
 }
 
-.col-sm-2, 
-.col-sm-3, 
-.col-sm-6, 
+.col-sm-2,
+.col-sm-3,
+.col-sm-6,
 .col-sm-7 {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .col-sm > .special-menu-h4 {
-    color:black;
+  color: black;
 }
 
 .separator-black {
-    border-bottom : 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .col-sm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+
+/*-----------------------  CSS FOR  MENU SECTION -----------------------------*/
+
+
+.section-menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/blackcar.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.menu-h1 {
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+  font-size: var(--font-md);
+  letter-spacing: 0.1rem;
+}
+.menu-h2 {
+  font-family: var(--font-family-primary);
+  color: white;
+  font-size: var(--font-md);
+  letter-spacing: 0.2rem;
+  margin-bottom: var(--margin-md);
+}
+
+
+.menu-container {
+    color: white;
+    text-align: left;
+    margin: var(--margin-xs);
+    font-family: var(--font-family-primary);
+}
+
+.menu-row {
     display: flex;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 50%;
-    background-color: white;
+    margin-bottom: var(--margin-md);
+
+}
+
+.menu-col {
+    width: 30%;;
+    text-align: center;
+    margin: var(--padding-xs);
+}
+
+.horizontal-line {
+  display: flex;
+}
+
+.menu-info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.menu-horizontal {
+    margin: auto;
+    flex-grow: 1;
+    border-bottom: 1px dashed  white;
+}
+
+.menu-title {
+    margin-right: var(--margin-sm);
+    font-size: var(--font-sm);
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.menu-price {
+    margin-left: var(--margin-sm);
+    font-size: var(--font-s);
+    color: var(--primary-color);
+}
+.menu-ingredients {
+    font-size: var(--font-xs);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* Booking Table Section  */
+
+
+.section-booking-table {
+  text-align: center;
+}
+
+.booking-h1 {
+  font-family: var(--font-family-secondary);
+  color: var(--primary-color);
+  font-size: var(--font-md);
+  letter-spacing: 0.1rem;
+}
+
+.booking-h2 {
+  font-family: var(--font-family-primary);
+  color: black;
+  font-size: var(--font-md);
+  margin-bottom: var(--margin-lg);
+  text-transform: uppercase;
+}
+
+.booking-row {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.booking-button {
+  padding-top: var(--padding-sm);
+  padding-bottom: var(--padding-sm);
+  margin-left: var(--margin-xs);
+  margin-right: var(--margin-xs);
+  flex-grow: 1;
+  background-color: var(--background-color);
+  color: gray;
+  border: 0.5px solid gray;
+  transition: var(--custom-transition);
+}
+
+.booking-button:hover {
+  border: 0.5px solid var(--primary-color);
+  color: var(--primary-color);
+  
+} 
+.button-gold {
+  background-color: var(--primary-color);
+}
+
+.button-gold:hover {
+  border: 3px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
 }
