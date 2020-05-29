@@ -1,41 +1,90 @@
+:root {
+
+    /* Color Variables */
+
+    --primary-color: gold;
+    --primary-light: rgb(243, 220, 91);
+    --secondary-color: #B8B8AA;
+    --background-color : #F5F9E9;
+
+
+    
+    /* Padding Sizes  */
+
+    --padding-xl: 8rem; 
+    --padding-lg: 4rem; 
+    --padding-md: 2rem; 
+    --padding-sm: 1rem; 
+    --padding-xs: 0.5rem; 
+
+    /* Margin Sizes  */
+
+    --margin-xl: 8rem; 
+    --margin-lg: 4rem; 
+    --margin-md: 2rem; 
+    --margin-sm: 1rem; 
+    --margin-xs: 0.5rem; 
+
+
+    /* Font size */
+
+    --font-xl : 4rem;
+    --font-lg : 3rem;
+    --font-md : 2rem;
+    --font-sm : 1rem;
+
+    /* Font Family */
+
+    --font-family-primary : 'Oswald', sans-serif;
+    --font-family-secondary :  'Yesteryear', cursive ;
+
+    /* Border Radius */
+    --border-radius: 0.5rem;
+
+
+}
+
+
 * {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    padding-bottom: var(--padding-md);
+    background-color: var(--primary-color);
+    background-color: var(--background-color);
+}
 
 /*-----------------------  CSS FOR HEADER -----------------------------*/
 
 .header { 
     background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../assets/images/dave.jpg") ;
-    height: 400px;
     background-size: cover;
     text-align: center;
+    padding-bottom: var(--padding-lg);
 }
 
-.headings {
-    color: white;
-}
 
-.header-title-1 {
-    font-family: 'Yesteryear', 'cursive';
-    color: gold;
-    font-size: 2rem;
-    line-height: 100%;
-}
-.header-title-2 {
-    font-family: 'Oswald', sans-serif;
+
+.header-main {
+    font-family: var(--font-family-primary);
     line-height: 100%;
     color: white;
-    font-size: 3rem;
-    letter-spacing: 3px;
-    margin-bottom: 2rem;
+    font-size: var(--font-xl);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: var(--margin-md);
 }
 
-
-
-
+.header-subtitle {
+    font-family: var(--font-family-secondary);
+    color: var(--primary-color);
+    font-size: var(--font-md);
+    letter-spacing: 0.1rem;
+    line-height: 100%;
+}
 
 
 /*-----------------------  CSS FOR NAVBAR -----------------------------*/
@@ -43,13 +92,14 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 2rem 0 2rem;
+    padding: var(--padding-md) var(--padding-md) 0 var(--padding-md);
 }
 
 .navbar-brand { 
     color: white;
     font-family: 'Yesteryear', cursive ;
     font-size: 3rem;
+    text-decoration: none;
 }
 
 .navbar-menu {
@@ -60,9 +110,9 @@ nav {
 
 .navbar-menu .nav-item {
     display: inline;
-    font-size: 1rem;
+    font-size: var(--font-sm);
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-family-primary)
 }
 
 .nav-item .nav-link {
@@ -70,8 +120,8 @@ nav {
     text-decoration: none;
     font-weight: 500;
     color: white;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left:  var(--margin-xs);
+    padding-right: var(--padding-xs);
     transition: all 0.3s ease-in-out;
 }
 
@@ -89,9 +139,6 @@ nav {
     padding: 0.5rem;
 }
 
-.container-header {
-    margin: 40px auto;
-}
 
 /*-----------------------  CSS FOR BUTTONS -----------------------------*/
 
@@ -106,12 +153,370 @@ nav {
     text-decoration: none;
 }
 
-.button--primary {
+.button-primary {
     color: black;
     background-color: gold;
     transition: all 0.3s ease-in-out;
 }
 
-.button--primary:hover {
-    background-color: rgb(255, 225, 57);
+.button-primary:hover {
+    background-color: var(--primary-light);
+}
+
+
+
+/*-----------------------  CSS FOR SECTION -----------------------------*/
+.section {
+    padding-top: var(--padding-lg);
+    padding-bottom: var(--padding-lg);
+}
+
+
+/*-----------------------  CSS FOR  DISCOVER SECTION -----------------------------*/
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--margin-md);
+}
+
+
+.food-item {
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: var(--padding-sm);
+    margin-right: var(--margin-xs);
+    margin-left: var(--margin-xs);
+    height: 20rem;
+    width: 17%;
+}
+
+.food-2 {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../assets/images/dave2.jpg");
+    background-size: cover;
+    margin-top: -2rem 
+}
+.food-3 {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../assets/images/dave3.jpg");
+    background-size: cover;
+    
+}
+
+.food-border {
+    border: 3px solid var(--primary-color);
+    position: relative;
+    border-radius: var(--border-radius);
+}
+
+.food-overlay {
+    position: absolute;
+    border-radius: var(--border-radius);
+    top: var(--padding-xs);
+    right:  var(--padding-xs);
+    padding-top: var(--padding-lg);
+    background-color: var(--secondary-color);
+    height: 100%;
+    width: 100%;
+}
+
+.food-title {
+    color: var(--primary-color); 
+    font-family:  var(--font-family-secondary);
+    font-size: var(--font-md);
+    -webkit-text-stroke: 0.0001px black;
+    line-height: 100%;
+    text-shadow: rgba(0,0,0,0.5);
+}
+
+.food-paragraph {
+    font-family:  var(--font-family-primary);
+    font-size: var(--font-sm);
+    color: black;
+    letter-spacing: 1px;
+}
+.food-paragraph-title {
+    font-family:  var(--font-family-primary);
+    font-size: var(--font-md);
+    color: black;
+    letter-spacing: 2px;
+}
+
+/*-----------------------  CSS FOR  SPECIALTIES SECTION -----------------------------*/
+
+.section-specialities {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("../assets/images/blackcar.jpg");
+    background-size: cover;
+}
+
+.specialities-h1 {
+    padding-top: var(--padding-md);
+    font-family: var(--font-family-secondary);
+    color: var(--primary-color);
+    font-size: var(--font-md);
+    letter-spacing: 0.1rem;
+}
+.specialities-h2 {
+    font-family: var(--font-family-primary);
+    color:  white ;
+    font-size: var(--font-md);
+    letter-spacing: 0.2rem;
+    margin-bottom: var(--margin-md);
+}
+
+
+.specialities-h3 {
+    font-family: var(--font-family-primary);
+    color: white;
+    font-size: var(--font-sm);
+    margin-bottom: var(--margin-lg);
+}
+
+
+.specialities-image1,
+.specialities-image2,
+.specialities-image3 {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 15rem;
+    background-size: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--margin-sm);
+}
+
+
+.specialities-image1 {
+    background-image: url("../assets/images/dave.jpg");
+}
+.specialities-image2 {
+    background-image: url("../assets/images/dave2.jpg");
+}
+.specialities-image3 {
+    background-image: url("../assets/images/dave3.jpg");
+}
+
+.specialities-image1:hover .specialities-overlay,
+.specialities-image2:hover .specialities-overlay,
+.specialities-image3:hover .specialities-overlay {
+    opacity: 1;
+    
+}
+
+.specialities-row {
+    display: flex;
+    justify-content: center;
+}
+.specialities-col {
+    width: 22%;
+    margin-left: var(--margin-xs);
+    margin-right: var(--margin-xs);
+}
+
+.specialities-overlay{
+    opacity: 0;
+    position: absolute;
+    background-color: rgb(255, 217, 0,0.7);
+    width: 100%;
+    height: 100%;
+    padding: var(--padding-sm);
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-md);
+    transition: all 0.4s ease-in-out;
+}
+
+.specialities-border {
+    border: 2px solid white;
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialities-middle {
+    text-align: center;
+    position: relative;
+}
+.specialities-middle::before {
+    content: '';
+    position: absolute;
+    border-top: 65px solid var(--background-color);
+    border-right: 100vw solid transparent;
+    top: -65px;
+    left: 0;
+}
+.specialities-middle::after {
+    content: '';
+    position: absolute;
+    border-bottom: 65px solid var(--background-color);
+    border-left: 100vw solid transparent;
+    bottom: -65px;
+    right: 0;
+}
+
+
+/*-----------------------  CSS FOR  SPECIAL MENU SECTION -----------------------------*/
+
+.section-special-menu {
+    text-align: center;
+}
+
+.special-menu-container {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.special-menu-col {
+    width: 50%;
+    height: 25rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.special-menu-h1 {
+    padding-top: var(--padding-md);
+    font-family: var(--font-family-secondary);
+    color: var(--primary-color);
+    font-size: var(--font-md);
+    letter-spacing: 0.1rem;
+}
+.special-menu-h2 {
+    font-family: var(--font-family-primary);
+    color:  black ;
+    line-height: 100%;
+    font-size: var(--font-md);
+    letter-spacing: 0.2rem;
+    margin-bottom: var(--margin-md);
+}
+.special-menu-h3 {
+    font-family: var(--font-family-secondary);
+    color:  white ;
+    font-size: var(--font-md);
+    width: 100%;
+    line-height: 100%;
+    margin-bottom: var(--margin-sm);
+    letter-spacing: 0.2rem;
+}
+.special-menu-h4 {
+    font-family: var(--font-family-primary);
+    width: 100%;
+    color:  white ;
+    font-size: var(--font-sm);
+    letter-spacing: 0.2rem;
+    line-height: 100%;
+    margin-bottom: var(--margin-sm);
+}
+
+.special-menu-icon {
+    font-size: var(--font-md);
+    width: 100%;
+    margin-bottom: var(--margin-sm);
+}
+.special-menu-p {
+    font-family: var(--font-family-primary);
+    width: 100%;
+    color:  white ;
+    font-size: var(--font-xs);
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    margin-bottom: var(--margin-sm);
+    margin-left: var(--margin-sm);
+    margin-right: var(--margin-sm);
+}
+
+.separator,
+.separator-black {
+    width: var(--margin-lg);
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: var(--margin-sm);
+
+}
+
+
+.col-large {
+    width: 50%;
+}
+
+.col-large-1, 
+.col-large-3{
+    display: flex;
+    background-color:var(--primary-color);
+    color: white;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col-large-2 {
+    background-image: url("../assets/images/blackcar.jpg");
+    background-size: cover;
+}
+.col-large-4 {
+    background-image: url("../assets/images/dave2.jpg");
+    background-size: cover;
+}
+
+/* 4 x 4 Box */
+
+.col-sm-1 *, 
+.col-sm-4 *,
+.col-sm-5 *,
+.col-sm-8 * {
+    color: var(--primary-color);
+    margin-bottom: var(--margin-xs);
+}
+
+/* COL-SM PICTURES */
+
+
+.col-sm-2 {
+    background: url("../assets/images/dave3.jpg");
+}
+
+.col-sm-3 {
+    background: url("../assets/images/dave3.jpg");
+}
+
+.col-sm-6 {
+    background: url("../assets/images/dave2.jpg");
+}
+
+.col-sm-7 {
+    background: url("../assets/images/dave.jpg");
+}
+
+.col-sm-2, 
+.col-sm-3, 
+.col-sm-6, 
+.col-sm-7 {
+    background-size: cover;
+    background-position: center;
+}
+
+.col-sm > .special-menu-h4 {
+    color:black;
+}
+
+.separator-black {
+    border-bottom : 2px solid black;
+}
+
+.col-sm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    background-color: white;
 }
